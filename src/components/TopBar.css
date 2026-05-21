@@ -1,0 +1,49 @@
+.top-bar {
+  background: var(--primary);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+  padding: 0.5rem 0;
+}
+
+.top-bar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.top-bar__left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.top-bar__item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.top-bar a {
+  color: var(--gold);
+  transition: color 0.2s;
+}
+
+.top-bar a:hover {
+  color: #fff;
+}
+
+.top-bar__gst {
+  color: var(--gold);
+}
+
+.top-bar__gst strong {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .top-bar__left .top-bar__item:first-child {
+    display: none;
+  }
+}

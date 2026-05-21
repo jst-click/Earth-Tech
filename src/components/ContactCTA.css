@@ -1,0 +1,55 @@
+.contact-cta__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-cta__text h3 {
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.contact-cta__text p {
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.contact-cta__details {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.contact-cta__details .gst-badge {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+.contact-cta__details .address-block {
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.contact-cta__phone {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contact-cta__phone a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .contact-cta__grid {
+    grid-template-columns: 1fr;
+  }
+}

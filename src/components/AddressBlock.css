@@ -1,0 +1,15 @@
+.address-block {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.address-block__line {
+  display: block;
+  line-height: 1.55;
+}
+
+.address-block--inline {
+  line-height: 1.5;
+}
