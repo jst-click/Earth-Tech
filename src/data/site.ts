@@ -1,7 +1,9 @@
 export const SITE = {
   name: 'Earth Tech Survey',
+  mobileBrand: 'EARTH TECH',
+  mobileTagline: 'Land Surveyor & Revenue Services',
   shortName: 'earthtechsurvey',
-  logo: '/logo.png',
+  logo: '/images/hape%20(5).png',
   logoAlt: 'Earth Tech Survey — land surveying and revenue services',
   tagline: 'Land Surveyor - Earth Tech Survey',
   heroTitle: 'A PRECISE LAND SURVEY TODAY TRANSLATES INTO BIG SAVINGS TOMORROW',
@@ -30,9 +32,16 @@ export function getPhoneTel(): string {
   return SITE.phone.replace(/\D/g, '')
 }
 
+export function getWhatsAppUrl(
+  text = `Hello ${SITE.name}, I would like to inquire about your land surveying services.`,
+): string {
+  return `https://wa.me/${getPhoneTel()}?text=${encodeURIComponent(text)}`
+}
+
 export const MAIN_NAV_LINKS = [
   { label: 'Home', path: '/' },
   { label: 'About Us', path: '/about' },
+  { label: 'Gallery', path: '/gallery' },
 ] as const
 
 export const NAV_LINKS = [

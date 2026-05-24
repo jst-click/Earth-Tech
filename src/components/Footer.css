@@ -89,6 +89,20 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
+.footer__bottom p + p {
+  margin-top: 0.5rem;
+}
+
+.footer__credit a {
+  color: var(--gold);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.footer__credit a:hover {
+  color: #fff;
+}
+
 @media (max-width: 900px) {
   .footer__grid {
     grid-template-columns: 1fr 1fr;

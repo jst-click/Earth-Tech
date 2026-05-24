@@ -14,14 +14,14 @@ export default function AboutSection() {
             <div className="about-section__bg-wrap">
               <SiteImage
                 src={IMAGES.about.background}
-                alt="Aerial view of land development and building survey project"
+                alt="Modern land surveying technology — total station, GIS mapping, and drone surveys"
                 className="about-section__bg"
               />
             </div>
             <div className="about-section__overlay-wrap">
               <SiteImage
                 src={IMAGES.about.surveyor}
-                alt="Land surveyor with total station on site"
+                alt="Surveyors using DGPS and total station equipment on a construction site"
                 className="about-section__overlay"
               />
             </div>
@@ -40,8 +40,8 @@ export default function AboutSection() {
           <p>
             We have extensive experience working on diverse land surveying and geotechnical civil
             engineering projects for both government and private sectors. Our services include
-            topographical surveys, revenue land services (Adbastu, 11E Sketch, Tatkal Podi,
-            Alination), DGPS, LiDAR, cadastral mapping, alignment surveys, and quantity surveying.
+            topographical surveys, revenue land services (Hadbastu, 11E Sketch, Tatkal Podi,
+            Alienation), DGPS, LiDAR, cadastral mapping, alignment surveys, and quantity surveying.
           </p>
           <div className="about-section__features">
             <div className="about-feature">

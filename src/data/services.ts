@@ -11,13 +11,13 @@ export type ServiceItem = {
 
 export const REVENUE_SERVICES: ServiceItem[] = [
   {
-    id: 'adbastu',
-    title: 'Adbastu',
+    id: 'hadbastu',
+    title: 'Hadbastu',
     category: 'revenue',
     description:
-      'Revenue land record correction and Adbastu survey services for accurate property documentation and legal compliance.',
+      'Revenue land record correction and Hadbastu survey services for accurate property documentation and legal compliance.',
     overview:
-      'Adbastu services help correct and update revenue land records to reflect actual ground positions. Our team works with revenue authorities to ensure your property records match surveyed boundaries, preventing disputes and enabling smooth transactions.',
+      'Hadbastu services help correct and update revenue land records to reflect actual ground positions. Our team works with revenue authorities to ensure your property records match surveyed boundaries, preventing disputes and enabling smooth transactions.',
     features: [
       'Revenue record verification and correction',
       'Boundary reconciliation with ground survey',
@@ -92,13 +92,13 @@ export const REVENUE_SERVICES: ServiceItem[] = [
     ],
   },
   {
-    id: 'alination',
-    title: 'Alination',
+    id: 'alienation',
+    title: 'Alienation',
     category: 'revenue',
     description:
-      'Alignment and alination surveys to establish correct boundaries and resolve land boundary disputes.',
+      'Alienation surveys to establish correct boundaries and resolve land boundary disputes.',
     overview:
-      'Alination (alignment) surveys establish the correct position of boundaries relative to revenue records and adjacent properties. This service is essential when boundaries are disputed or encroachments need to be resolved.',
+      'Alienation surveys establish the correct position of boundaries relative to revenue records and adjacent properties. This service is essential when boundaries are disputed or encroachments need to be resolved.',
     features: [
       'Boundary alignment with revenue pillars',
       'Encroachment identification and mapping',
@@ -416,6 +416,6 @@ export const WHY_US_ITEMS = [
   {
     title: 'Revenue Services',
     description:
-      'Complete revenue land services including Adbastu, 11E Sketch, Tatkal Podi, and Alination.',
+      'Complete revenue land services including Hadbastu, 11E Sketch, Tatkal Podi, and Alienation.',
   },
 ]

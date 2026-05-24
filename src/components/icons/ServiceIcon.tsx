@@ -16,10 +16,10 @@ import {
 } from 'react-icons/fa'
 
 const SERVICE_ICONS: Record<string, IconType> = {
-  adbastu: FaClipboardList,
+  hadbastu: FaClipboardList,
   '11e-sketch': FaDraftingCompass,
   'tatkal-podi': FaBolt,
-  alination: FaCompass,
+  alienation: FaCompass,
   topographical: FaMap,
   'marking-staking': FaMapMarkerAlt,
   'measured-drawings': FaRulerCombined,

@@ -5,8 +5,8 @@ const img = (path: string) => path
 export const IMAGES = {
   hero: img('/images/hero.jpg'),
   about: {
-    background: img('/images/about-bg.jpg'),
-    surveyor: img('/images/about-survey.jpg'),
+    background: img('/images/about/about-bg.png'),
+    surveyor: img('/images/about/about-survey.png'),
   },
   fallback: img('/images/hero.jpg'),
   banners: {
@@ -15,28 +15,27 @@ export const IMAGES = {
     contact: img('/images/banner-contact.jpg'),
     default: img('/images/hero.jpg'),
   },
-  gallery: [
-    { src: img('/images/gallery-1.jpg'), title: 'Topographical Survey', alt: 'Topographical land survey mapping' },
-    { src: img('/images/gallery-2.jpg'), title: 'DGPS Mapping', alt: 'DGPS satellite positioning survey' },
-    { src: img('/images/gallery-3.jpg'), title: 'LiDAR Survey', alt: 'Drone LiDAR aerial survey' },
-    { src: img('/images/gallery-4.jpg'), title: 'Cadastral Mapping', alt: 'Cadastral map and land records' },
-    { src: img('/images/gallery-5.jpg'), title: 'Revenue Services', alt: 'Property and revenue land documentation' },
-    { src: img('/images/gallery-6.jpg'), title: 'Geotechnical Site', alt: 'Geotechnical investigation at construction site' },
-  ],
   services: {
-    adbastu: img('/images/services/adbastu.jpg'),
+    hadbastu:
+      'https://www.global-agriculture.com/wp-content/uploads/2025/02/Untitled-1-21-768x427.jpg',
     '11e-sketch': img('/images/services/11e-sketch.jpg'),
-    'tatkal-podi': img('/images/services/tatkal-podi.jpg'),
-    alination: img('/images/services/alination.jpg'),
-    topographical: img('/images/services/topographical.jpg'),
-    'marking-staking': img('/images/services/marking-staking.jpg'),
-    'measured-drawings': img('/images/services/measured-drawings.jpg'),
+    'tatkal-podi':
+      'https://static.langimg.com/vk/thumb/119685020/podi-land.jpg?imgsize=120816&width=1600&height=900&resizemode=75',
+    alienation:
+      'https://media.assettype.com/deccanherald%2Fimport%2Fsites%2Fdh%2Ffiles%2Farticleimages%2F2022%2F04%2F25%2Fistock-12543307821-1103209-1650697517-1103646-1650839309.jpg?w=undefined&auto=format%2Ccompress&fit=max',
+    topographical:
+      'https://i0.wp.com/epitomegs.com/wp-content/uploads/2021/05/topographic-survay.jpg?fit=1000%2C668&ssl=1',
+    'marking-staking': 'https://moggs.in/wp-content/uploads/2025/09/Artboard-231.png',
+    'measured-drawings':
+      'https://www.lifeofanarchitect.com/wp-content/uploads/2019/07/As-Built-Measurements-02.jpg',
     geotechnical: img('/images/services/geotechnical.jpg'),
     dgps: img('/images/services/dgps.jpg'),
     cadastral: img('/images/services/cadastral.jpg'),
-    lidar: img('/images/services/lidar.jpg'),
-    alignment: img('/images/services/alignment.jpg'),
-    quantity: img('/images/services/quantity.jpg'),
+    lidar:
+      'https://cdn.prod.website-files.com/67510567a502b6a7c4c13a49/69787c891aeaff2dc522c0db_6978037a12006df3518d9bcc-1769502210673.jpeg',
+    alignment: 'https://adgonline.in/sites/assets/front/file/16364489847600872.jpg',
+    quantity:
+      'https://duotax.com.au/wp-content/uploads/what-is-a-quantity-surveyor-min.jpg',
   },
 } as const
 

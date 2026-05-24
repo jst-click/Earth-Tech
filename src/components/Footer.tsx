@@ -64,6 +64,16 @@ export default function Footer() {
             Copyright © {new Date().getFullYear()} {SITE.name}. All Rights Reserved. |{' '}
             <GstBadge />
           </p>
+          <p className="footer__credit">
+            Design & Developed by{' '}
+            <a
+              href="https://jstclick.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              JST CLICK
+            </a>
+          </p>
         </div>
       </div>
     </footer>

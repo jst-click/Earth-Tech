@@ -6,7 +6,7 @@ A React website for **Earth Tech Survey** (earthtechsurvey), modeled after a pro
 
 ## Services
 
-**Revenue Services:** Adbastu, 11E Sketch, Tatkal Podi, Alination
+**Revenue Services:** Hadbastu, 11E Sketch, Tatkal Podi, Alienation
 
 **Surveying Services:** Topographical Surveys, Marking/Staking Out, Measured Drawings, Geotechnical Investigation, DGPS Surveys, Cadastral Mapping, LiDAR Surveys, Alignment Surveys, Quantity Surveying
 
@@ -31,17 +31,17 @@ npm run preview
 - `/` — Home
 - `/about` — About Us
 - `/services` — All Services (listing)
-- `/services/:serviceId` — Individual service page (e.g. `/services/adbastu`, `/services/topographical`)
+- `/services/:serviceId` — Individual service page (e.g. `/services/hadbastu`, `/services/topographical`)
 - `/contact` — Contact & form
 
 ### Service URLs
 
 | Revenue | Surveying |
 |---------|-----------|
-| `/services/adbastu` | `/services/topographical` |
+| `/services/hadbastu` | `/services/topographical` |
 | `/services/11e-sketch` | `/services/marking-staking` |
 | `/services/tatkal-podi` | `/services/measured-drawings` |
-| `/services/alination` | `/services/geotechnical` |
+| `/services/alienation` | `/services/geotechnical` |
 | | `/services/dgps` |
 | | `/services/cadastral` |
 | | `/services/lidar` |

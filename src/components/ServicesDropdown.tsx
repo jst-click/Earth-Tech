@@ -1,17 +1,36 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { SERVICE_MENU, getServicePath } from '../data/services'
 import ServiceIcon from './icons/ServiceIcon'
 import './ServicesDropdown.css'
 
+const MOBILE_NAV_MQ = '(max-width: 900px)'
+
 type Props = {
   onNavigate?: () => void
+}
+
+function useMobileNav() {
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== 'undefined' ? window.matchMedia(MOBILE_NAV_MQ).matches : false,
+  )
+
+  useEffect(() => {
+    const mq = window.matchMedia(MOBILE_NAV_MQ)
+    const update = () => setIsMobile(mq.matches)
+    update()
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
+
+  return isMobile
 }
 
 export default function ServicesDropdown({ onNavigate }: Props) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const location = useLocation()
+  const isMobile = useMobileNav()
   const isServicesActive = location.pathname.startsWith('/services')
 
   useEffect(() => {
@@ -19,6 +38,8 @@ export default function ServicesDropdown({ onNavigate }: Props) {
   }, [location.pathname])
 
   useEffect(() => {
+    if (isMobile) return
+
     function handleClickOutside(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) {
         setOpen(false)
@@ -28,7 +49,7 @@ export default function ServicesDropdown({ onNavigate }: Props) {
       document.addEventListener('mousedown', handleClickOutside)
     }
     return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [open])
+  }, [open, isMobile])
 
   function close() {
     setOpen(false)
@@ -38,27 +59,40 @@ export default function ServicesDropdown({ onNavigate }: Props) {
   return (
     <div
       ref={ref}
-      className={`services-dropdown ${open ? 'open' : ''} ${isServicesActive ? 'active' : ''}`}
+      className={`services-dropdown ${isMobile ? 'services-dropdown--flat' : ''} ${open ? 'open' : ''} ${isServicesActive ? 'active' : ''}`}
     >
-      <button
-        type="button"
-        className="services-dropdown__trigger"
-        aria-expanded={open}
-        aria-haspopup="true"
-        onClick={() => setOpen(!open)}
-      >
-        Services
-        <svg
-          className="services-dropdown__chevron"
-          width="12"
-          height="12"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          aria-hidden
+      {isMobile ? (
+        <NavLink
+          to="/services"
+          className={({ isActive }) =>
+            `services-dropdown__trigger services-dropdown__trigger--flat${isActive ? ' active' : ''}`
+          }
+          onClick={onNavigate}
+          end={false}
         >
-          <path d="M7 10l5 5 5-5z" />
-        </svg>
-      </button>
+          Services
+        </NavLink>
+      ) : (
+        <button
+          type="button"
+          className="services-dropdown__trigger"
+          aria-expanded={open}
+          aria-haspopup="true"
+          onClick={() => setOpen(!open)}
+        >
+          Services
+          <svg
+            className="services-dropdown__chevron"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden
+          >
+            <path d="M7 10l5 5 5-5z" />
+          </svg>
+        </button>
+      )}
 
       <div className="services-dropdown__panel">
         <Link to="/services" className="services-dropdown__all" onClick={close}>

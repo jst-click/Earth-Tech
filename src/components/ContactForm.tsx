@@ -41,10 +41,10 @@ export default function ContactForm() {
               Select a service
             </option>
             <optgroup label="Revenue Services">
-              <option>Adbastu</option>
+              <option>Hadbastu</option>
               <option>11E Sketch</option>
               <option>Tatkal Podi</option>
-              <option>Alination</option>
+              <option>Alienation</option>
             </optgroup>
             <optgroup label="Surveying Services">
               <option>Topographical Surveys</option>

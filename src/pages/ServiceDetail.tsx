@@ -13,6 +13,11 @@ import './ServiceDetail.css'
 
 export default function ServiceDetail() {
   const { serviceId } = useParams<{ serviceId: string }>()
+
+  if (serviceId === 'adbastu') {
+    return <Navigate to="/services/hadbastu" replace />
+  }
+
   const service = serviceId ? getServiceById(serviceId) : undefined
 
   if (!service) {

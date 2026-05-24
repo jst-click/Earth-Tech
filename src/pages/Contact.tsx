@@ -2,7 +2,7 @@ import PageBanner from '../components/PageBanner'
 import AddressBlock from '../components/AddressBlock'
 import ContactForm from '../components/ContactForm'
 import GstBadge from '../components/GstBadge'
-import { SITE, getPhoneTel } from '../data/site'
+import { SITE, getWhatsAppUrl } from '../data/site'
 import PhoneLink from '../components/PhoneLink'
 import './Contact.css'
 
@@ -39,7 +39,7 @@ export default function Contact() {
               <GstBadge />
             </p>
             <a
-              href={`https://wa.me/${getPhoneTel()}?text=Hello%20${encodeURIComponent(SITE.name)}`}
+              href={getWhatsAppUrl()}
               className="btn btn-primary contact-page__whatsapp"
               target="_blank"
               rel="noopener noreferrer"

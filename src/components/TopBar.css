@@ -43,7 +43,16 @@
 }
 
 @media (max-width: 768px) {
-  .top-bar__left .top-bar__item:first-child {
+  .top-bar__inner {
+    justify-content: center;
+  }
+
+  .top-bar__left {
     display: none;
+  }
+
+  .top-bar__right {
+    text-align: center;
+    width: 100%;
   }
 }
